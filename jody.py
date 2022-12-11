@@ -8,7 +8,7 @@ from datetime import date
 st.title("MEET JO! :information_desk_person:")
 
 today = date.today().strftime("%A, %B %d %Y")
-st.markdown(f"Today is {today}")
+st.markdown(f"Today is **{today}**")
 
 
 with st.sidebar:
