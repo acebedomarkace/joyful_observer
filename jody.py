@@ -13,7 +13,7 @@ st.markdown(f"Today is {today}")
 
 with st.sidebar:
     st.subheader("Thanks for working with JO!\nThe Joyful Observer's assistant Web App")
-    st.write("Please contact us to get access!")
+    st.write("We value your feedback!")
 
 
 tab1, tab2, tab3 = st.tabs(["Meeting Areas","Psychological Safety","Summary"])
