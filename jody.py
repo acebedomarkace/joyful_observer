@@ -7,6 +7,7 @@ from streamlit_extras.colored_header import colored_header
 from PIL import Image
 
 import pandas as pd
+import numpy as np
 import emoji
 from datetime import date
 
@@ -136,3 +137,50 @@ with tab3:
         st.caption("Challenger:")
         st.write(challenger_comments)
         
+    mtg_df = df1.copy()
+    mtg_txt = [timeliness_comments,agenda_comments,equal_voice_comments,
+    data_driven_comments,follow_through_comments]
+    mtg_df["Notes"] = mtg_txt
+    mtg_df["Category"]="Meeting"
+    
+    # Add a Meeting Totals Row
+    mtg_totals = {"Areas":[""],"Scores":[mtg_area_score],
+    "Notes":[""],"Category":["Meeting Total Score:"],}
+    mtg_totals = pd.DataFrame(mtg_totals)
+
+    mtg_df = mtg_df.append(mtg_totals)
+
+    psyc_df = df2.copy()
+    psyc_txt = [inclusion_comments,learner_comments,
+    contributor_comments,challenger_comments,""]
+    psyc_df["Notes"]=psyc_txt
+    psyc_df["Category"]="Psychological_Safety"
+    psyc_df["Notes"].replace('', np.nan, inplace=True)
+    psyc_df.dropna(subset=["Notes"],inplace=True)
+    
+
+
+    # Add a Psychological Safety Totals Row
+    psyc_totals = {"Areas":[""],"Scores":[psych_area_score],
+    "Notes":[""],"Category":["Psychological Safety Total Score:"],}
+    psyc_totals = pd.DataFrame(psyc_totals)
+
+    psyc_df = psyc_df.append(psyc_totals)
+
+    mom = pd.concat([mtg_df,psyc_df])
+    mom = mom[['Category','Areas','Scores','Notes']]
+
+
+
+    def convert_df(df):
+        return df.to_csv(index=False).encode('utf-8')
+    
+    csv = convert_df(mom)
+
+    st.download_button(
+    "Download Meeting Details",
+    csv,
+    f"Meeting_Minutes_{today}.csv",
+    "text/csv",
+    key='download-csv'
+    )
