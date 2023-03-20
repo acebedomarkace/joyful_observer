@@ -132,4 +132,4 @@ with tab3:
         st.caption("Challenger:")
         st.write(challenger_comments)
         
-    button(username="fake-username", floating=True, width=221)
+    button(username="fake-username", floating=False, width=221)
