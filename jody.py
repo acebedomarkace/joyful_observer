@@ -80,6 +80,7 @@ with tab3:
     col1.metric(label="Meeting Score", value=mtg_area_score, delta=(mtg_area_score-5))
     col2.metric(label="Safety Score", value=psych_area_score, delta=(psych_area_score-5))
     style_metric_cards()
+    button(username="fake-username", floating=True, width=221)
 
     
     rain(
