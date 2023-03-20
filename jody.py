@@ -4,6 +4,7 @@ from streamlit_extras.metric_cards import style_metric_cards
 from streamlit_extras.let_it_rain import rain
 from streamlit_extras.buy_me_a_coffee import button
 from streamlit_extras.colored_header import colored_header
+from PIL import Image
 
 import pandas as pd
 import emoji
@@ -16,6 +17,8 @@ st.title("MEET JO! :information_desk_person:")
 #    description="This is a description",
 #    color_name="violet-70",
 # )
+
+img= Image.open("coffeecup.jpg")
 
 today = date.today().strftime("%A, %B %d %Y")
 st.markdown(f"Today is {today}")
