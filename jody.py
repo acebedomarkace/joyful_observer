@@ -169,6 +169,7 @@ with tab3:
 
     mom = pd.concat([mtg_df,psyc_df])
     mom = mom[['Category','Areas','Scores','Notes']]
+    mom["Date"]=today
 
 
 
