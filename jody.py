@@ -26,8 +26,9 @@ st.markdown(f"Today is {today}")
 
 with st.sidebar:
     st.subheader("Thanks for working with JO!\nThe Joyful Observer's assistant Web App")
-    # st.write("Please contact us to get access!")
-    # button(username="datakuyamackie", floating=False, width=221)
+    st.write("Buy us some coffee :coffee:!")
+    st.write("Scan GCash QR below")
+    st.image(img,width=180)
     
 
 tab1, tab2, tab3 = st.tabs(["Meeting Areas","Psychological Safety","Summary"])
