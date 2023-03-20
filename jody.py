@@ -1,20 +1,31 @@
 # Import the packages
 import streamlit as st
+from streamlit_extras.metric_cards import style_metric_cards
+from streamlit_extras.let_it_rain import rain
+from streamlit_extras.buy_me_a_coffee import button
+from streamlit_extras.colored_header import colored_header
+
 import pandas as pd
 import emoji
 from datetime import date
 
 # Add app title
 st.title("MEET JO! :information_desk_person:")
+# colored_header(
+#    label="My New Pretty Colored Header",
+#    description="This is a description",
+#    color_name="violet-70",
+# )
 
 today = date.today().strftime("%A, %B %d %Y")
-st.markdown(f"Today is **{today}**")
+st.markdown(f"Today is {today}")
 
 
 with st.sidebar:
     st.subheader("Thanks for working with JO!\nThe Joyful Observer's assistant Web App")
-    st.text("Have a great meeting!")
-
+    st.write("Please contact us to get access!")
+    button(username="fake-username", floating=False, width=221)
+    
 
 tab1, tab2, tab3 = st.tabs(["Meeting Areas","Psychological Safety","Summary"])
 
@@ -66,9 +77,20 @@ with tab2:
 with tab3:
 
     col1,col2 = st.columns(2,gap="large")
+    col1.metric(label="Meeting Score", value=mtg_area_score, delta=(mtg_area_score-5))
+    col2.metric(label="Safety Score", value=psych_area_score, delta=(psych_area_score-5))
+    style_metric_cards()
+
+    
+    rain(
+    emoji="✨",
+    font_size=30,
+    falling_speed=3,
+    animation_length="infinite",
+    )
 
     with col1:
-        st.subheader(f"Meeting Score = **{mtg_area_score}**")
+        # st.subheader(f"Meeting Score = **{mtg_area_score}**")
         st.write(df1)
 
         st.caption("Timeliness:")
@@ -89,9 +111,10 @@ with tab3:
 
         st.caption("Follow Through:")
         st.write(follow_through_comments)
-    
+
+            
     with col2:
-        st.subheader(f"Safety Score = **{psych_area_score}**")
+        # st.subheader(f"Safety Score = **{psych_area_score}**")
         st.write(df2)
 
         st.caption("Inclusion:")
