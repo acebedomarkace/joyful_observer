@@ -27,7 +27,7 @@ st.markdown(f"Today is {today}")
 
 with st.sidebar:
     st.subheader("Thanks for working with JO!\nThe Joyful Observer's assistant Web App")
-    st.write("Buy us some coffee :coffee:!")
+    st.write("Buy us coffee :coffee:!")
     st.write("Scan GCash QR below")
     st.image(img,width=180)
     
