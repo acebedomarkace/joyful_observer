@@ -166,7 +166,8 @@ with tab3:
     "Notes":[""],"Category":["Psychological Safety Total Score:"],}
     psyc_totals = pd.DataFrame(psyc_totals)
 
-    psyc_df = psyc_df.append(psyc_totals)
+    #psyc_df = psyc_df.append(psyc_totals)
+    psyc_df = pd.concat([psyc_df,psyc_totals])
 
     mom = pd.concat([mtg_df,psyc_df])
     mom = mom[['Category','Areas','Scores','Notes']]
