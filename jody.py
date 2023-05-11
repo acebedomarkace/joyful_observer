@@ -148,7 +148,8 @@ with tab3:
     "Notes":[""],"Category":["Meeting Total Score:"],}
     mtg_totals = pd.DataFrame(mtg_totals)
 
-    mtg_df = mtg_df.append(mtg_totals)
+    #mtg_df = mtg_df.append(mtg_totals)
+    mtg_df = pd.concat([mtg_df,mtg_totals])
 
     psyc_df = df2.copy()
     psyc_txt = [inclusion_comments,learner_comments,
