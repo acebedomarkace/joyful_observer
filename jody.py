@@ -38,14 +38,14 @@ with tab1:
 
     timeliness = st.slider("**How is the timeliness of the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
     
-    with st.expander("See guide"):
+    with st.expander("Timeliness scoring guide:"):
         st.caption('Did the meeting start & finish on time?')
         
     timeliness_comments = st.text_area("Timeliness comments here:")
 
     agenda = st.slider("**Were all the set agenda covered?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Agenda scoring guide:"):
         st.caption("""
         Did we state the objectives of the meeting and did we meet them?\n
         Did we keep to the topic? Were parking lots used for off-topics?
@@ -55,7 +55,7 @@ with tab1:
 
     equal_voice = st.slider("**Did everyone had the chance to speak?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Equal Voice scoring guide"):
         st.caption("""
         Did everyone speak? Did someone speak most than others unnecessarily?
         """)
@@ -64,7 +64,7 @@ with tab1:
 
     data_driven = st.slider("**Were presentations data-driven?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Data Driven scoring guide"):
         st.caption("""
         Were the discussions backed up with facts and actual stats?
         """)
@@ -73,7 +73,7 @@ with tab1:
 
     follow_through = st.slider("**How did the team do with the follow-through items?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Follow Through scoring guide"):
         st.caption("""
         Were action items (Responsible, Expected Get Back, Timeline) clearly stated at the end of the session?\n 
         Were the recommended direct/specific action verbs used?\n
@@ -92,7 +92,7 @@ with tab2:
 
     inclusion = st.slider("**Was the meeting inclusive?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Inclusion scoring guide"):
         st.caption("""
         Is the meeting size just right to encourage conversational turn-taking?\n
         Did everyone get a chance to be heard?\n
@@ -103,7 +103,7 @@ with tab2:
 
     learner = st.slider("**How was the learner attitude of the team?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Learner scoring guide"):
         st.caption("""
         Did people feel safe to ask questions or clarifications without being judged?\n
         Did we take time to learn from mistakes/misses/callouts?\n
@@ -114,7 +114,7 @@ with tab2:
 
     contributor = st.slider("**Did everyone get to contribute his/her ideas?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Contributor scoring guide"):
         st.caption("""
         Did the team feel safe to raise threats & call outs?\n
         Did people practice patience and not shoot the messenger for "bad/different" ideas?
@@ -124,7 +124,7 @@ with tab2:
 
     challenger = st.slider("**How were the challenges handled during the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
 
-    with st.expander("See guide"):
+    with st.expander("Challenger scoring guide"):
         st.caption("""
         Did we create an environment where it is OK to correct and be corrected, challenge and be challenged, and to have different points of view?\n 
         Did we encourage out of the box thinking and encourage challenging the norm?
