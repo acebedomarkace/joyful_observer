@@ -49,7 +49,7 @@ with tab1:
 
     with st.expander("See guide"):
         st.write("""
-        Did we state the objectives of the meeting and did we meet them? 
+        Did we state the objectives of the meeting and did we meet them?\n
         Did we keep to the topic? Were parking lots used for off-topics?
         """)
         
