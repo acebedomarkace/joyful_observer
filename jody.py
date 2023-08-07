@@ -36,23 +36,52 @@ tab1, tab2, tab3 = st.tabs(["Meeting Areas","Psychological Safety","Summary"])
 
 with tab1:
 
-    with st.expander("See Timeliness assessment guide"):
+    timeliness = st.slider("**How is the timeliness of the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
+    
+    with st.expander("See guide"):
         st.write("""
         Did the meeting start & finish on time?
         """)
-    timeliness = st.slider("**How is the timeliness of the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
+        
     timeliness_comments = st.text_area("Timeliness comments here:")
 
     agenda = st.slider("**Were all the set agenda covered?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Did we state the objectives of the meeting and did we meet them? 
+        Did we keep to the topic? Were parking lots used for off-topics?
+        """)
+        
     agenda_comments = st.text_area("Agenda comments here:")
 
     equal_voice = st.slider("**Did everyone had the chance to speak?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Did everyone speak? Did someone speak most than others unnecessarily?
+        """)
+    
     equal_voice_comments = st.text_area("Equal Voice comments here:")
 
     data_driven = st.slider("**Were presentations data-driven?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Were the discussions backed up with facts and actual stats?
+        """)
+    
     data_driven_comments = st.text_area("Data Driven comments here:")
 
     follow_through = st.slider("**How did the team do with the follow-through items?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Were action items (Responsible, Expected Get Back, Timeline) clearly stated at the end of the session? 
+        Were the recommended direct/specific action verbs used?
+        [For Recurring Meetings or Cadences] Were get backs on action items from previous sessions updated or closed?
+        """)    
+    
     follow_through_comments = st.text_area("Follow Through comments here:")
 
     mtg_area = [["Timeliness",timeliness],["Agenda",agenda],["Equal Voice",equal_voice],["Data-driven",data_driven],["Follow Through",follow_through]]
@@ -64,15 +93,45 @@ with tab1:
 with tab2:
 
     inclusion = st.slider("**Was the meeting inclusive?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Is the meeting size just right to encourage conversational turn-taking?
+        Did everyone get a chance to be heard?
+        Did everyone pay attention and recognize inputs and contributions of each other?
+        """)
+        
     inclusion_comments = st.text_area("Inclusiveness comments here:")
 
     learner = st.slider("**How was the learner attitude of the team?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Did people feel safe to ask questions or clarifications without being judged?
+        Did we take time to learn from mistakes/misses/callouts?
+        Did we take time to hear the facts and opinions before making a decision? 
+        """)
+            
     learner_comments = st.text_area("Learner comments here:")
 
     contributor = st.slider("**Did everyone get to contribute his/her ideas?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Did the team feel safe to raise threats & call outs?
+        Did people practice patience and not shoot the messenger for "bad/different" ideas?
+        """)
+            
     contributor_comments = st.text_area("Contributor comments here:")
 
     challenger = st.slider("**How were the challenges handled during the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
+
+    with st.expander("See guide"):
+        st.write("""
+        Did we create an environment where it is OK to correct and be corrected, challenge and be challenged, and to have different points of view? 
+        Did we encourage out of the box thinking and encourage challenging the norm?
+        """)
+            
     challenger_comments = st.text_area("Challenger comments here:")
 
     psych_area = [["Inclusion",inclusion],["Learner",learner],["Contributor",contributor],["Challenger",challenger],["",""]]
