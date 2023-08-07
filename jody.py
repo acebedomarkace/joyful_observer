@@ -36,11 +36,11 @@ tab1, tab2, tab3 = st.tabs(["Meeting Areas","Psychological Safety","Summary"])
 
 with tab1:
 
-    timeliness = st.slider("**How is the timeliness of the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
-    with st.expander("See guide"):
+    with st.expander("See Timeliness assessment guide"):
         st.write("""
         Did the meeting start & finish on time?
         """)
+    timeliness = st.slider("**How is the timeliness of the meeting?**",min_value=1.0, max_value=5.0, step=0.5)
     timeliness_comments = st.text_area("Timeliness comments here:")
 
     agenda = st.slider("**Were all the set agenda covered?**",min_value=1.0, max_value=5.0, step=0.5)
