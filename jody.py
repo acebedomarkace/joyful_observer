@@ -77,8 +77,8 @@ with tab1:
 
     with st.expander("See guide"):
         st.write("""
-        Were action items (Responsible, Expected Get Back, Timeline) clearly stated at the end of the session? 
-        Were the recommended direct/specific action verbs used?
+        Were action items (Responsible, Expected Get Back, Timeline) clearly stated at the end of the session?\n 
+        Were the recommended direct/specific action verbs used?\n
         [For Recurring Meetings or Cadences] Were get backs on action items from previous sessions updated or closed?
         """)    
     
@@ -96,8 +96,8 @@ with tab2:
 
     with st.expander("See guide"):
         st.write("""
-        Is the meeting size just right to encourage conversational turn-taking?
-        Did everyone get a chance to be heard?
+        Is the meeting size just right to encourage conversational turn-taking?\n
+        Did everyone get a chance to be heard?\n
         Did everyone pay attention and recognize inputs and contributions of each other?
         """)
         
@@ -107,8 +107,8 @@ with tab2:
 
     with st.expander("See guide"):
         st.write("""
-        Did people feel safe to ask questions or clarifications without being judged?
-        Did we take time to learn from mistakes/misses/callouts?
+        Did people feel safe to ask questions or clarifications without being judged?\n
+        Did we take time to learn from mistakes/misses/callouts?\n
         Did we take time to hear the facts and opinions before making a decision? 
         """)
             
@@ -118,7 +118,7 @@ with tab2:
 
     with st.expander("See guide"):
         st.write("""
-        Did the team feel safe to raise threats & call outs?
+        Did the team feel safe to raise threats & call outs?\n
         Did people practice patience and not shoot the messenger for "bad/different" ideas?
         """)
             
@@ -128,7 +128,7 @@ with tab2:
 
     with st.expander("See guide"):
         st.write("""
-        Did we create an environment where it is OK to correct and be corrected, challenge and be challenged, and to have different points of view? 
+        Did we create an environment where it is OK to correct and be corrected, challenge and be challenged, and to have different points of view?\n 
         Did we encourage out of the box thinking and encourage challenging the norm?
         """)
             
